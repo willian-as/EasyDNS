@@ -17,6 +17,12 @@ apt-get install apache2  php5  mysql-server php5-mysql
 
 apt-get install openssh-server libssh2-php
 
+Reinicie o Apache
+
+## Instalaçāo
+
+* Copie os arquivos para o diretório: /var/www/html
+* Execute o arquivo install.php e depois exclua o mesmo
 
 ### Exemplos de serviços já existentes
 
