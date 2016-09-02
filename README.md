@@ -9,7 +9,7 @@ Sistema web para configuração e controle de um servidor DNS.
 * Adicionar, configurar, listar e remover zonas;
 * Adicionar, configurar, listar e remover domínios;
 
-## Instalaçao
+## Instalando dependencias
 
 *openssh-server* , *libssh2-php*, *LAMP*
 
