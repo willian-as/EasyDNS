@@ -1,0 +1,68 @@
+*{
+	
+}
+
+.colunas {
+	width: 250px;
+}
+
+/**** BEGIN Tabela Zonas ****/
+
+table{
+	color: #505050 !important;
+}
+
+table .nome{
+	background-color: #f2d8d9; /*RED CLARO*/
+}
+
+table .ttl {
+	background-color: #bbe9c3; /*VERDE CLARO*/
+}
+
+table .classe {
+	background-color: #a6cfe1; /*AZUL CLARO*/
+} 
+
+table .type {
+	background-color: #e2bee9; /*rosa/roxo CLARO*/
+}
+
+table .registro {
+	background-color: #ece7c6; /*AMARELO CLARO*/
+} 
+
+
+
+.icons {
+	width: 20px;
+	height: 20px;
+}
+
+/**** END Tabela Zonas ****/
+
+/**** BEGIN Pagina Login ****/
+.page-login{
+	background-color: #1E1E1E;
+}
+
+.form-login{
+	margin-left: 35%;
+	margin-right: 35%;
+	margin-top: 5%;
+	/*color: black;*/
+}
+
+.form-login h2{
+	text-align: center;
+}
+
+#icon-contact{
+	border-radius: 100%;
+	background-image: url('../images/icons/contact-icon.png');
+	background-size: 120px;
+	width: 120px;
+	height: 120px;
+	margin: auto;
+}
+/**** END Pagina Login ****/
