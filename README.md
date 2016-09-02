@@ -11,7 +11,7 @@ Sistema web para configuração e controle de um servidor DNS.
 
 ## Instalando dependencias
 
-*openssh-server* , *libssh2-php*, *LAMP*
+* openssh-server , libssh2-php, LAMP;
 
 apt-get install apache2  php5  mysql-server php5-mysql
 
