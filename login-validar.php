@@ -9,11 +9,6 @@
 	$password = $_POST['senha'];
 	$passwdebcrip = md5($password);
 
-//	$con = new mysqli("localhost","root","neujdi","Easy-Dns"); //Estabelece a conexão
-//	if (!$con){
-//		echo "erro: ".mysqli_connect_error();
-//		exit();
-//	}
 	$sql = "SELECT * FROM usuario WHERE login = \"$login\" AND passwdencrip = \"$passwdebcrip\"";
 
 	if ($result = $con->query($sql)){
