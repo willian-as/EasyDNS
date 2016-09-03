@@ -21,7 +21,7 @@ Reinicie o Apache
 
 ## Instalaçāo
 
-* Copie os arquivos para o diretório: /var/www/html
+* Copie os arquivos ou  faça um git clone para o diretório: /var/www/html
 * Execute o script de instalaçāo no browser: http://localhost/easydns/install.php
 * Exclua o arquivo install.php após executá-lo
 
