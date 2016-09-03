@@ -4,12 +4,12 @@
 
         $objeto = new Zona($_POST['inputIPDominio'], $_POST['type']);
         $retorno = $objeto->addreverse($connect_ssh);
-        if($retorno){ //Executa se Adicionou com sucesso...
+        if($retorno){ 
 
-            //Scripts abaixo mostram popup dizendo sucesso ou falha para adicionar Zona
-?>          <script type="text/javascript">
+?>
+    <script type="text/javascript">
                 alert(" <?php echo 'Zona adicionada com sucesso!! '; ?> ");
-            </script>
+    </script>
 <?php
         }else{
 
@@ -58,8 +58,6 @@
                             <li class="active"><a href="#adicionar-tab" data-toggle="tab">Adicionar</a></li>
 
                             <li><a href="#note-tab" data-toggle="tab">Editar</a></li>
-
-                            <!--<li><a href="#label-badge-tab" data-toggle="tab">Visualizar</a></li>-->
                         </ul>
 
                     <div id="generalTabContent" class="tab-content responsive">
@@ -143,13 +141,13 @@
 
                                     if(isset($_POST['pesquisar'])){
                                         $domain = $_POST['domainPesquisar'];
-                                        $type = $_POST['type']; //nao utilizando no momento..
+                                        $type = $_POST['type']; 
 
                                         //Criando objeto Zona, com "domain" e "type" passado
                                         $obj_zona_find = new Zona($domain, $type);
 
                                         //Chama metodo pesquisaZona do objeto e retorna um array com os
-                                        // dados da Zona como "file" e "type" para jogar numa table
+                                        // dados da Zona como "file" e "type" para jogar num table
                                         $array_pesquisa = $obj_zona_find->pesquisaZona($connect_ssh, $domain);
                                         if(!$array_pesquisa){
                                             //Se retornou false...
@@ -183,8 +181,7 @@
                                                 if (!$dados_zona) {
                                                     echo "Não encontrado arquivo de Registro de Recurso de domínio!! ";
                                                 }else{
-                                                    // Para visualiza o array descomente linha abaixo...
-                                                    //print_r($dados_zona);
+                                                    
                                             ?>
                                                     <!-- Table mostrando todos os dados da Zona-->
                                                     <br>
@@ -206,11 +203,11 @@
 
                                                         <?php // Laço mostrando dados do array retornado...
                                                                 for ($i=0; $i < count($dados_zona); $i++) {
-                                                                // Laco constroi linhas da tabela em html...
+                                                                
                                                         ?>
                                                                     <tr>
 
-                                                                    <?php   for ($j=0; $j < 4; $j++) {     //4 -> qtde de dados qm cada linha da matriz
+                                                                    <?php   for ($j=0; $j < 4; $j++) {     
                                                                                 // Laço mostrando dados das linhas...   ?>
                                                                                 <td> <?php echo $dados_zona[$i][$j]; ?> </td>
                                                                     <?php   } ?>
