@@ -28,8 +28,8 @@
 		}
 
 		public function add($conection){
-			$remote_file = "/etc/bind/named.conf.local";	//way arq a ser copiado
-			$local_file = "/tmp/named.conf.local.cpy"; 	//way arq copiado
+			$remote_file = "/etc/bind/named.conf.local";	
+			$local_file = "/tmp/named.conf.local.cpy"; 	
 
 			// Copiando arquivo do server remote
 			if(!ssh2_scp_recv($conection, $remote_file, $local_file)){
@@ -45,8 +45,8 @@
 		}
 
 		public function addreverse($conection){
-			$remote_file = "/etc/bind/named.conf.local";	//way arq a ser copiado
-			$local_file = "/tmp/named.conf.local.cpy"; 	//way arq copiado
+			$remote_file = "/etc/bind/named.conf.local";	
+			$local_file = "/tmp/named.conf.local.cpy"; 	
 			if(!ssh2_scp_recv($conection, $remote_file, $local_file)){
 				echo "nao copiou..";
 				return false;
@@ -86,8 +86,8 @@
 		// retornar array com dados da zona
 		public function pesquisaZona($conection, $domain){
 
-			$remote_file = "/etc/bind/named.conf.local";	//way arq a ser copiado
-			$local_file = "/tmp/named.conf.local.cpy"; 	//way arq copiado
+			$remote_file = "/etc/bind/named.conf.local";	
+			$local_file = "/tmp/named.conf.local.cpy"; 	
 
 			// Copiando arquivo do server remote
 			if(!ssh2_scp_recv($conection, $remote_file, $local_file)){
