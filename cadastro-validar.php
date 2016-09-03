@@ -10,13 +10,6 @@
 	$confpassword = $_POST['confirmarsenha'];
 
 
-
-//	$con = new mysqli("localhost","root","neujdi","Easy-Dns"); //Estabelece a conexão
-//	if (!$con){
-//		echo "erro: ".mysqli_connect_error();
-//		exit();
-//	}
-
 	if($password===$confpassword){
 		$passwdencrip = md5($password); //Função md5 criptografa a senha
 	}else {
