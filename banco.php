@@ -2,7 +2,7 @@
 
 	$bdServidor = 'localhost';
 	$bdUsuario = 'root';
-	$bdSenha = 'neujdi';
+	$bdSenha = '';	//colocar senha do banco
 	$bdBanco = 'Easy-Dns';
 
 	$con = mysqli_connect($bdServidor, $bdUsuario, $bdSenha, $bdBanco);
