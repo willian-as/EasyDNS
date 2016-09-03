@@ -8,9 +8,6 @@
         	}
 	}
 
-
-	//Funcao para ler arquivo
-	//variavel $way e o caminho do file
 	function read_file($way){
 		$data = file_get_contents($way);
 		$convert = explode("\n", $data);
@@ -22,28 +19,24 @@
 	}
 
 	function dominioInvertido($dominio){
-	//Recebe: empresa.com.br
-	//Retorna: br.com.empresa
-	$array = explode(".", $dominio);
-        $array_reverse = array_reverse($array);
-        $juntado = implode(".", $array_reverse);
-        return $juntado;
+		$array = explode(".", $dominio);
+	        $array_reverse = array_reverse($array);
+	        $juntado = implode(".", $array_reverse);
+	        return $juntado;
 	}
 
-
 	function del_zona($domain){
-		$remote_file = "/etc/bind/named.conf.local";			//way arq a ser copiado
-		$local_file = "/tmp/named.conf.local.cpy"; 				//way arq copiado
-		$local_file_modif = "/tmp/named.conf.local.cpy.alt";	//wau arq alterado
+		$remote_file = "/etc/bind/named.conf.local";		
+		$local_file = "/tmp/named.conf.local.cpy"; 		
+		$local_file_modif = "/tmp/named.conf.local.cpy.alt";	
 
 		// Copiando arquivo do server remote
 		if(!ssh2_scp_recv($_SESSION['connection'], $remote_file, $local_file)){
 			return false;
 		}
-
 		//Abrir file
-		$file_original = fopen($local_file, 'r');		//abri arq para leitura
-		$file_alterado = fopen($local_file_modif, 'w');	//cria um arq zerado
+		$file_original = fopen($local_file, 'r');	
+		$file_alterado = fopen($local_file_modif, 'w');	
 
 		for ($i=0;;$i++) {
 			$linha = fgets($file_original);
@@ -58,8 +51,7 @@
 
 ?>
 
-<!--
-?>  <script type="text/javascript">
+<script type="text/javascript">
         alert(" <?php echo 'Erro via ssh...'; ?> ");
     </script>
 <?php
